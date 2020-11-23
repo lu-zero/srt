@@ -1190,7 +1190,7 @@ int main( int argc, char** argv )
             Verb() << "Connected. Establishing pipe.";
 
             // No exception, we are free to pass :)
-            g_tunnels.install(move(accepted), move(caller));
+            g_tunnels.install(move(caller), move(accepted));
         }
         catch (...)
         {
